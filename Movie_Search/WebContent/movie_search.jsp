@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/movie.css">
 <script>
+
 	//crossDomain 해결코드
 	$(function() {
 		$.ajaxPrefilter(function(options, originalOptions, jqXHR) {
@@ -163,9 +164,6 @@
 						type : "GET",
 						dataType : "JSON",
 						contentType : "application/x-www-form-urlencoded; charset=UTF-8",
-						async : true,
-						cache : true,
-						timeout : 0,
 						headers : {
 							//네이버에서 발급받은 아이디랑 시크릿키 입력
 							"X-Naver-Client-Id" : XNaverClientId,
@@ -257,9 +255,6 @@
 </head>
 <body>
 
-
-	
-	
 	<div id="movieChart">
 		
 		<div id="mo_searchBox">
@@ -281,14 +276,9 @@
 	<div class="wrap3">
 		<h5 style="display:inline-block;">포스터를 클릭하면 네이버 영화정보로 넘어갑니다.</h5>
 		<div id="close" onclick="$.close();" style="float:right;">X</div>
-		<div class="wrap2" id="popup">
-			
-			
-		</div>
+		<div class="wrap2" id="popup"></div>
 	</div>
 	
-	<div id="bottomSpace">
-	
-	</div>
+	<div id="bottomSpace"></div>
 </body>
 </html>
